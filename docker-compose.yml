@@ -1,0 +1,10 @@
+services:
+  producer:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - SESSION_NAME=${SESSION_NAME}
+    restart: unless-stopped
